@@ -1,12 +1,12 @@
-import Table from "./components/table.jsx"
+import TableBody from "./components/table.jsx"
 
 export default function App() {
   return (
-    <div>
+    <div className="">
       <div className="text-center p-4">
         <h1 className="text-3xl font-bold">Hello world!</h1>
       </div>
-      <Table />
+      <TableBody />
     </div>
   );
 }

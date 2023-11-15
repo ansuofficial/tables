@@ -1,28 +1,31 @@
 import { TableData } from "./tableData";
-console.log(TableData)
 const TableBody = () => {
   return (
-    <div className="bg-slate-200 h-[100vh]">
-      <div>
-        <input type="text" className="ring-1" />
-      </div>
-      <form className="p-4 ring">
-        <thead className="flex ring">
-          <tr className="ring flex w-full justify-between">
-            <th className="odd:bg-yellow-200 even:bg-violet-200 w-full">FirstName</th>
-            <th className="odd:bg-yellow-200 even:bg-violet-200 w-full">LastName</th>
-            <th className="odd:bg-yellow-200 even:bg-violet-200 w-full">Phone</th>
-            <th className="odd:bg-yellow-200 even:bg-violet-200 w-full">Contact</th>
-            <th className="odd:bg-yellow-200 even:bg-violet-200 w-full">Cost</th>
-            <th className="odd:bg-yellow-200 even:bg-violet-200 w-full">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-      </form>
-    </div>
-  );
-};
+   <div className="ring py-4 px-12">
+     <table className="w-full ring-1 ring-slate-200 rounded  shadow-xl">
+      <thead className="mb-4">
+        <tr>
+          <th className="flex-1 odd:bg-yellow-200 even:bg-violet-200">FirstName</th>
+          <th className="flex-1 odd:bg-yellow-200 even:bg-violet-200">LastName</th>
+          <th className="flex-1 odd:bg-yellow-200 even:bg-violet-200">Phone</th>
+          <th className="flex-1 odd:bg-yellow-200 even:bg-violet-200">Status</th>
+        </tr>
+      </thead>
 
+      <tbody className="text-center">
+       {TableData.map( (item) => {
+        return (     
+        <tr className="">
+          <td className="flex-1 odd:bg-yellow-50 even:bg-violet-50">{item.FirstName}</td>
+          <td className="flex-1 odd:bg-yellow-50 even:bg-violet-50">{item.LastName}</td>
+          <td className="flex-1 odd:bg-yellow-50 even:bg-violet-50">{item.Phone}</td>
+          <td className="flex-1 odd:bg-yellow-50 even:bg-violet-50">{item.Status}</td>
+        </tr>
+        )
+       })}
+      </tbody>
+    </table>
+   </div>
+  );
+}
 export default TableBody;

@@ -30,9 +30,9 @@ export const TableData = [
     Status: "Completed",
   },
   {
-    FirstName: "Fatou",
+    FirstName: "Mustapha",
     LastName: "Badjie",
-    Phone: 2220111,
+    Phone: 5220111,
     Cost: 400,
     Status: "pending",
   },
